@@ -12,7 +12,7 @@ class ApplicationController < Sinatra::Base
 
   post '/login' do
     @user = User.find_by_username(params[:username])
-    binding.pry
+
     if @user
       session[:user_id] = @user.id
 
