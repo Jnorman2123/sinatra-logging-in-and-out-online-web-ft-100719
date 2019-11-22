@@ -26,7 +26,6 @@ class ApplicationController < Sinatra::Base
     @user = User.find_by_username(params[:username])
     if @user
       erb :account
-      binding.pry
     else
       erb :error
     end
